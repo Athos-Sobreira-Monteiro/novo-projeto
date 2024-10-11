@@ -1,0 +1,70 @@
+{% block content %}
+    <div class="container">
+        <h1>Cadastrar Tarefa</h1>
+        
+        <form action="" method="post" class="form-cadastrar">
+            {% csrf_token %}
+            
+            {{ form }}
+            
+            <input type="submit" value="Cadastrar" class="btn-cadastrar">
+        </form>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #4CAF50; /* Borda verde */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centraliza o texto */
+        }
+
+        h1 {
+            color: #4CAF50; /* Cor do título */
+            margin-bottom: 20px;
+        }
+
+        .form-cadastrar {
+            display: flex;
+            flex-direction: column; /* Para empilhar os elementos do formulário */
+            align-items: center; /* Centraliza os itens do formulário */
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%; /* Largura total */
+            padding: 10px; /* Espaçamento interno */
+            margin: 10px 0; /* Margem entre os campos */
+            border: 1px solid #ccc; /* Borda do campo de entrada */
+            border-radius: 4px; /* Bordas arredondadas */
+            font-size: 16px; /* Tamanho da fonte */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Cor do botão */
+            color: white; /* Cor do texto */
+            border: none; /* Remove a borda padrão do botão */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+{% endblock %}

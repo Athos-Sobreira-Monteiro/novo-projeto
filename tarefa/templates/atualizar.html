@@ -1,0 +1,82 @@
+{% block content %}
+    <div class="container">
+        <h1>Editar Tarefa</h1>
+        
+        <form method="post" enctype="multipart/form-data" class="form-editar">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            
+            <div class="button-container">
+                <input type="submit" value="Salvar Alterações" class="btn-salvar">
+                <a href="{% url 'lista' %}" class="btn-cancelar">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #4CAF50; /* Borda verde para editar */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centraliza o texto */
+        }
+
+        h1 {
+            color: #FF6F61; /* Alterado para vermelho claro */
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around; /* Espaçamento entre os botões */
+        }
+
+        .btn-salvar {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Cor do botão de salvar */
+            color: white; /* Cor do texto */
+            border: none; /* Remove a borda padrão do botão */
+            border-radius: 4px; /* Bordas arredondadas */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+        }
+
+        .btn-salvar:hover {
+            background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+        }
+
+        .btn-cancelar {
+            padding: 10px 20px;
+            background-color: #d9534f; /* Cor do botão de cancelar */
+            color: white; /* Cor do texto */
+            text-decoration: none; /* Remove o sublinhado */
+            border-radius: 4px; /* Bordas arredondadas */
+        }
+
+        .btn-cancelar:hover {
+            background-color: #c9302c; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+{% endblock %}
