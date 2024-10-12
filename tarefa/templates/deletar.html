@@ -8,7 +8,7 @@
             {% csrf_token %}
             <div class="button-container">
                 <button type="submit" class="btn-deletar">Deletar tarefa</button>
-                <a href="{% url 'atualizar' pk=object.pk %}" class="btn-editar">Editar Tarefa</a> <!-- Botão de Editar Tarefa -->
+                <a href="{% url 'atualizar' pk=object.pk %}" class="btn-editar">Editar Tarefa</a> 
                 <a href="{% url 'lista' %}" class="btn-cancelar">Cancelar</a>
             </div>
         </form>
@@ -32,62 +32,62 @@
             max-width: 400px;
             background-color: #ffffff;
             padding: 20px;
-            border: 2px solid #d9534f; /* Borda vermelha para deletar */
+            border: 2px solid #d9534f; 
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Centraliza o texto */
+            text-align: center; 
         }
 
         h1 {
-            color: #d9534f; /* Cor do título */
+            color: #d9534f; 
             margin-bottom: 20px;
         }
 
         p {
-            color: #333; /* Cor do texto da pergunta */
+            color: #333; 
             margin-bottom: 20px;
         }
 
         .button-container {
             display: flex;
-            justify-content: space-around; /* Espaçamento entre os botões */
+            justify-content: space-around; 
         }
 
         .btn-deletar {
             padding: 10px 20px;
-            background-color: #d9534f; /* Cor do botão de deletar */
-            color: white; /* Cor do texto */
-            border: none; /* Remove a borda padrão do botão */
-            border-radius: 4px; /* Bordas arredondadas */
-            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+            background-color: #d9534f; 
+            color: white; 
+            border: none; 
+            border-radius: 4px;
+            cursor: pointer; 
         }
 
         .btn-deletar:hover {
-            background-color: #c9302c; /* Cor do botão ao passar o mouse */
+            background-color: #c9302c; 
         }
 
         .btn-editar {
             padding: 10px 20px;
-            background-color: #007BFF; /* Cor do botão de editar */
-            color: white; /* Cor do texto */
-            text-decoration: none; /* Remove o sublinhado */
-            border-radius: 4px; /* Bordas arredondadas */
+            background-color: #007BFF; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
         }
 
         .btn-editar:hover {
-            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+            background-color: #0056b3; 
         }
 
         .btn-cancelar {
             padding: 10px 20px;
-            background-color: #4CAF50; /* Cor do botão de cancelar */
-            color: white; /* Cor do texto */
-            text-decoration: none; /* Remove o sublinhado */
-            border-radius: 4px; /* Bordas arredondadas */
+            background-color: #4CAF50; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
         }
 
         .btn-cancelar:hover {
-            background-color: #45a049; /* Cor do botão ao passar o mouse */
+            background-color: #45a049;
         }
     </style>
 {% endblock %}
